@@ -61,13 +61,18 @@ or the runbook's format wins and the personality disappears.
 
 Skip this step when one existing skill already covers the job; the SOUL points at it instead.
 
+Paths into the bot's home folder (reports, drafts) use the folder found in step 4. Orca names it
+from the bot's full name, so don't guess it: until the bot exists, write `<bot home>` and fill it
+in when you install.
+
 ## 3. Write the SOUL (how the bot sounds)
 
 Read `references/soul.md` and start from `templates/SOUL.md`. The rules that matter most:
 
 - **First person.** "I racked servers before the CMO was born", not "He is a 60-year-old sysadmin".
   A description gives the model facts; a voice gives it something to copy.
-- **The line under the title is the purpose**, one sentence. Orca shows it as the bot's "For:" line.
+- **The paragraph under the title is the purpose**: one sentence, under about 110 characters.
+  Orca shows it as the bot's "For:" line and cuts the rest.
 - **Who wins**: "The runbook decides what I do and which facts I report. This file decides how I sound."
 - **I'm in every line**, not only the first and the last.
 - **Seven to ten example lines** ("How I sound"). They shape the tone more than any description.
@@ -78,7 +83,7 @@ Read `references/soul.md` and start from `templates/SOUL.md`. The rules that mat
 
 ## 4. Install it in Orca
 
-Read `references/orca.md`. In short:
+Read `references/orca.md` for the folder layout, first-run setup and tools. The steps:
 
 1. Find the CLI: `$ORCA_CLI_COMMAND` if set, else `orca`. On Linux outside an Orca terminal use
    `orca-ide`: bare `orca` there is the GNOME screen reader.
@@ -120,7 +125,9 @@ Tell the owner, briefly and in plain words:
 - what the bot does alone, what it drafts for approval, and what it never does;
 - anything you reshaped from the brief, and why;
 - three prompts to try in the bot's chat;
-- the avatars you recommend, and how to upload one.
+- the avatars you recommend, and how to upload one;
+- for a new bot: make the first message in its chat "Your SOUL.md is final, keep it as it is."
+  A new bot's first answered message runs Orca's first-run setup, which rewrites `SOUL.md`.
 
 Offer a **voice check**: give a separate session the SOUL, the runbook and the facts from one real
 request, with no tools that change anything, and show the owner how the bot sounds.

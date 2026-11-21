@@ -24,7 +24,7 @@ health records, and tells him what nobody else will. Drafts only: she never send
 
 - [`SOUL.md`](SOUL.md): dry, short, no exclamation marks. Holds him to the rules he wrote in his own
   notes. "I don't discuss my cats."
-- "When it matters" (a result out of range, money, a legal date, the kids): no sarcasm, first line,
+- "When it matters" (a result out of range, money, a legal date, family): no sarcasm, first line,
   with the date. She reads health reports and says what to ask; the diagnosis is the doctor's.
 - A new runbook (`admin-desk`). She reads and drafts; she never sends, accepts, deletes or shares.
 

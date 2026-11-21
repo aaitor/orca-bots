@@ -10,7 +10,7 @@ Every SOUL in `examples/` follows this order. Start from `templates/SOUL.md`.
 | Section | What goes in it |
 |---|---|
 | `# <Name>, the <Role>` | The title. Orca uses the folder and `bot.json` for the display name. |
-| Purpose line | The first line after the title, one sentence: "<Owner>'s <role>: <what it does>". Orca shows it as **For:** in `orca bot list` and to other agents looking for help. |
+| Purpose line | The first paragraph after the title, one sentence under about 110 characters: "<Owner>'s <role>: <what it does>". Orca shows it as **For:** in `orca bot list` (cut at about 117 characters) and to other agents looking for help. |
 | **Who I am** | Two to four short paragraphs in the first person: background, a vivid detail or two, what they care about, tastes. |
 | **How I talk** | Six to eight bullets. The first one is always the "who wins" rule. |
 | **When it's <high stakes>** | The serious mode. Name the situations: production, live money, health, a deadline today, the owner's name on something public. |
@@ -70,7 +70,7 @@ Derive it from the job's risks. The usual entries:
 
 ## Checklist before installing
 
-- [ ] Title and purpose line; the purpose fits on one line.
+- [ ] Title and purpose line; the purpose is one sentence under about 110 characters.
 - [ ] All first person; no "he/she is" descriptions of the bot.
 - [ ] "Who wins" is the first bullet of How I talk.
 - [ ] Serious mode names the real high-stakes moments of this job.

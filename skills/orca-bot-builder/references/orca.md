@@ -4,13 +4,8 @@ Checked against Orca 1.4. If a command here fails, run `<orca> bot --help` and t
 
 ## The CLI
 
-Pick the executable once and reuse it:
-
-- `$ORCA_CLI_COMMAND` when it is set (Orca exports it in managed sessions);
-- otherwise `orca`, **except on Linux outside an Orca terminal**, where `orca` is usually the GNOME
-  screen reader (`/usr/bin/orca`) and starts speaking. Use `orca-ide` there.
-
-Inside a SOUL or runbook, write `${ORCA_CLI_COMMAND:-orca}` so it works from any bot.
+SKILL.md step 4 says which executable to use. Inside a SOUL or runbook, write
+`${ORCA_CLI_COMMAND:-orca}` so it works from any bot.
 
 ## A bot's home
 
@@ -28,21 +23,23 @@ Inside a SOUL or runbook, write `${ORCA_CLI_COMMAND:-orca}` so it works from any
 Orca rewrites `AGENTS.md`, `CLAUDE.md` and `bot.json`; edits to them are lost. Everything the bot
 should know about itself goes in `SOUL.md`; everything about the job goes in the runbook.
 
-The line after the SOUL's title is the purpose. `orca bot list` shows it as **For:** (`specialty`
-in `--json`), and other agents see it when they look for a bot to ask.
+What a bot is for is the first paragraph of its `SOUL.md`. `orca bot list` shows it as **For:**
+(`specialty` in `--json`), cut at about 117 characters, and other agents see it when they look for
+a bot to ask. Keep it to one sentence under about 110 characters.
 
 ## Creating the bot
 
-- **From the Orca app**: the owner creates a new bot with a name and a purpose. This works everywhere
-  and is the default. The folder slug comes from the name at creation; renaming the bot later does
-  not move the folder. Find the folder by the name in its `bot.json`:
-  `grep -l '"name": "<Name>' ~/.orca/bots/*/bot.json`.
-- **From a bot's chat**: `orca bot create --offer --name "<Name>" --purpose "<one sentence>"` puts a
-  card in that chat; the bot is created when the owner presses **Create bot**. It fails with "Run
-  this from a bot's chat" anywhere else.
+SKILL.md step 4 covers the two ways (the Orca app, or `orca bot create --offer` from a bot's chat).
+What it doesn't say:
 
-Then find its folder, read the starter `SOUL.md` Orca wrote, and replace it with
-the full SOUL, keeping anything the owner added by hand.
+- The folder slug comes from the name at creation (`Sami (the Architect)` → `sami-the-architect`).
+  Renaming the bot later does not move the folder.
+- `orca bot create --offer` fails with "Run this from a bot's chat" anywhere else; the bot exists
+  only after the owner presses **Create bot**.
+- **First-run setup.** A new bot's first answered message runs Orca's first-run setup, which tells
+  the bot to write `SOUL.md` from what it knows, keeping only a `## Never` section. That would
+  replace the SOUL this skill installed. Tell the owner to make the first message "Your SOUL.md is
+  final, keep it as it is."
 
 ## When a SOUL change takes effect
 

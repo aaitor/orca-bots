@@ -92,8 +92,7 @@ will still read at that size.
 ## Built by the skill, unedited
 
 [Margo, the Doc Keeper](skills/orca-bot-builder/examples/margo-the-doc-keeper/) is the brief from the
-Quick start below, run once through the skill in a headless Claude Code session with no other
-context. It wrote a first-person SOUL, a full `docs-desk` runbook, and these six concepts. Before
+Quick start below, run once through the skill in a headless Claude Code session, unedited. It wrote a first-person SOUL, a full `docs-desk` runbook, and these six concepts. Before
 showing them, it caught and fixed what read wrong at 40 px: a shush finger that looked like a long
 nose, a mohawk that looked like a grey cap, crossed pencils that looked like a tiara.
 
@@ -110,32 +109,36 @@ keys or paid services beyond your agent.
 
 **Install as a Claude Code plugin:**
 
-```text
-/plugin install orca-bot-builder --marketplace aaitor/orca-bots
+```bash
+claude plugin install orca-bot-builder --marketplace aaitor/orca-bots
 ```
 
-On older Claude Code versions, run `/plugin marketplace add aaitor/orca-bots` first, then
+Or from inside Claude Code: `/plugin marketplace add aaitor/orca-bots`, then
 `/plugin install orca-bot-builder@orca-bots`.
 
 **Or install the skill folder directly** (any agent that reads `~/.claude/skills/`):
 
 ```bash
 git clone https://github.com/aaitor/orca-bots.git
-ln -s "$PWD/orca-bots/skills/orca-bot-builder" ~/.claude/skills/orca-bot-builder
+mkdir -p ~/.claude/skills && ln -s "$PWD/orca-bots/skills/orca-bot-builder" ~/.claude/skills/orca-bot-builder
 ```
 
 **Then ask for a bot**, in any session or in an Orca bot's chat:
 
 ```text
-Create an Orca bot called Margo, the Doc Keeper. "docs check" lists what's stale in our docs
-against the code, "update docs for PR #N" drafts the changes a merged PR needs. She drafts on a
-branch and never merges. She's a retired 1970s librarian who went punk: shushes people, loves
-index cards and the Ramones, calls stale docs "overdue books". Make her some avatars.
+Create a bot called Margo, the Doc Keeper. She keeps our project documentation honest: "docs
+check" compares the docs folder with the code on main and lists what is stale, "update docs for
+PR #N" drafts the doc changes a merged PR needs, and "how-to for X" writes a short how-to from
+the code. She drafts changes on a branch and never merges.
+Margo is a retired 1970s librarian who went punk: shushes people, loves index cards, the Ramones
+and a well-made index. Pedantic about dates, versions and broken links, warm underneath. She calls
+stale docs "overdue books".
 ```
 
 **What you get back:** a short list of assumptions, the `SOUL.md`, a runbook skill, a round-1
 contact sheet of four to eight avatar concepts with two or three recommended, and three prompts to
-try. [Margo's folder](skills/orca-bot-builder/examples/margo-the-doc-keeper/) is exactly that output. The skill asks you to create the bot in Orca if it doesn't exist yet, installs the SOUL into
+try. [Margo's folder](skills/orca-bot-builder/examples/margo-the-doc-keeper/) shows a real run of this
+brief, [hand-over](skills/orca-bot-builder/examples/margo-the-doc-keeper/handover.md) included. The skill asks you to create the bot in Orca if it doesn't exist yet, installs the SOUL into
 `~/.orca/bots/<slug>/`, and leaves the avatar for you to upload by clicking the bot's picture.
 Then say "more variations of 3" or "make him older, with glasses" and it draws round 2.
 
@@ -149,7 +152,7 @@ Then say "more variations of 3" or "make him older, with glasses" and it draws r
   [the runbook guide](skills/orca-bot-builder/references/runbook.md).
 - **Guardrails from the brief.** Anything that publishes, sends, deploys, pays or contacts
   people waits for the owner. Unsafe asks are reshaped, and the owner is told once.
-- **Arcade avatars.** A starter script, pixel helpers, five finished examples to borrow from,
+- **Arcade avatars.** A starter script, pixel helpers, six finished examples to borrow from,
   contact sheets with Orca-sized round previews, and a list of lessons on what reads at 40 px.
   See [the avatar guide](skills/orca-bot-builder/references/avatars.md).
 - **Reproducible pictures.** Every bot keeps its `avatar.py`. CI redraws every example and checks

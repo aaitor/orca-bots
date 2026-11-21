@@ -2,10 +2,13 @@
 
 <img src="avatar.png" alt="Margo: pink punk spikes, teal cat-eye glasses, a studded leather jacket, a finger to her lips" width="160" align="right">
 
-**Built by the skill, unedited.** Margo is the brief from the [Quick start](../../../../README.md#quick-start),
-run once through `orca-bot-builder` in a headless Claude Code session with no other context, as a
-dry run that installed nothing. Everything here is what came out; only the owner's name was changed
-to "Alex". The run took about twelve minutes and 47 turns.
+**Built by the skill, unedited.** Margo is the brief below (also the [Quick start](../../../../README.md#quick-start)
+example), run once through `orca-bot-builder` in a headless Claude Code session, as a dry run that
+installed nothing. Everything here is what came out, including the [hand-over](handover.md); only
+the owner's name was changed to "Alex". The run took about twelve minutes and 47 turns.
+
+It ran with the maintainer's usual Claude Code setup, so a few lines come from his global rules,
+not from the skill: the `## Why this matters` PR opening and the pre-PR review gate in the runbook.
 
 ## The brief
 
@@ -30,6 +33,9 @@ to "Alex". The run took about twelve minutes and 47 turns.
   waits for the owner's go on that exact diff, since the team can see it; PRs open as drafts;
   "update docs for PR #N" refuses unmerged PRs; a separate "draft the fixes" request keeps
   "docs check" read-only.
+
+**Fixed in the skill afterwards:** the runbook guessed the bot's folder (`~/.orca/bots/margo/`).
+Orca names folders from the full name, so the skill now writes `<bot home>` until the bot exists.
 
 ## Avatars
 

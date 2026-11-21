@@ -2,19 +2,16 @@
 
 ## The bot ignores its personality
 
-The most common problem, and it usually has one of four causes:
-
-1. **The reply came from the old SOUL.** Orca sends the updated `SOUL.md` with the next message. A
-   reply that was already running used the previous version. Send another message.
-2. **The SOUL describes the bot in the third person** ("He is a 60-year-old sysadmin"). Rewrite it
-   as "I". A description gives the model facts; a voice gives it something to copy.
-3. **The runbook wins.** A runbook that says "follow exactly" and shows a plain report template
-   beats the SOUL. Add to its report section: "Write the report in your SOUL.md voice, from the
-   first line to the last, without changing any fact."
-4. **No example lines for that situation.** Add two or three "How I sound" lines for the exact
-   moment that came out flat (a test report, a failure, a hand-over).
-
+Usually one of four things: the reply came from the old SOUL (Orca sends the new one with the next
+message), the SOUL describes the bot in the third person, the runbook's report format wins, or
+there are no example lines for that situation. The fixes are in
+[the SOUL guide](../skills/orca-bot-builder/references/soul.md#when-the-owner-says-it-ignores-the-personality).
 Ask the skill: "Paco's last report had no personality, fix it." It checks all four.
+
+## The SOUL changed after the bot's first message
+
+Orca's first-run setup ran: a new bot's first answered message rewrites `SOUL.md`, keeping only
+`## Never`. Ask the skill to reinstall the SOUL, then send "Your SOUL.md is final, keep it as it is."
 
 ## The personality leaks into published work
 

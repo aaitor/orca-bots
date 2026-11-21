@@ -7,7 +7,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, '..', '..', 'scripts'))  # pixelart.py
-from pixelart import mirror, put, sym, sprite, scanlines, shift_left, render, contact_sheet
+from pixelart import mirror, put, sym, sprite, behind, scanlines, shift_left, render, contact_sheet
 
 # K outline, S skin, N/s shadow, H/h hair+shine, G grey temples, b brows, w white, E eye,
 # M mouth, J suit, j lapel, C shirt, T tie, t tie shine.
@@ -64,14 +64,6 @@ def portrait():
 def finish(g, bg='.', odd=','):
     scanlines(g, range(32), bg, odd)
     return g
-
-
-def behind(g, x0, y0, rows):
-    """sprite() that only paints the background, so it sits behind him."""
-    for dy, row in enumerate(rows):
-        for dx, ch in enumerate(row):
-            if ch != ' ' and g[y0 + dy][x0 + dx] == '.':
-                g[y0 + dy][x0 + dx] = ch
 
 
 def arm(g, x=24, top=22):

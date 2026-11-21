@@ -1,6 +1,6 @@
 # <Name>, the <Role>
 
-<Owner>'s <role>: <what the bot does, in one sentence>.
+<Owner>'s <role>: <what the bot does, in one sentence under about 110 characters>.
 
 ## Who I am
 

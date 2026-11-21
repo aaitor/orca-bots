@@ -11,11 +11,11 @@ The skill only writes local files. It needs no API keys, accounts or network acc
 
 ## Claude Code plugin
 
-```text
-/plugin install orca-bot-builder --marketplace aaitor/orca-bots
+```bash
+claude plugin install orca-bot-builder --marketplace aaitor/orca-bots
 ```
 
-On older Claude Code versions, add the marketplace first:
+Or from inside Claude Code:
 
 ```text
 /plugin marketplace add aaitor/orca-bots
@@ -30,7 +30,7 @@ Clone the repository and link the skill into your skills directory:
 
 ```bash
 git clone https://github.com/aaitor/orca-bots.git
-ln -s "$PWD/orca-bots/skills/orca-bot-builder" ~/.claude/skills/orca-bot-builder
+mkdir -p ~/.claude/skills && ln -s "$PWD/orca-bots/skills/orca-bot-builder" ~/.claude/skills/orca-bot-builder
 ```
 
 `git pull` in the clone updates it. To keep a copy instead of a link, use `cp -r`.

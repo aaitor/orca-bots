@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.0.1 (2026-11-21)
+
+From Sami's review:
+
+- Warn about Orca's first-run setup, which rewrites a new bot's SOUL on its first answered message.
+- Purpose line: one sentence under about 110 characters; `orca bot list` cuts the rest.
+- The runbook no longer guesses the bot's folder: `<bot home>` until the bot exists.
+- `behind()` now paints scanline rows too, so props behind the head aren't dotted after `shift_left()`.
+- One-step install: `claude plugin install orca-bot-builder --marketplace aaitor/orca-bots`.
+- Margo's example: exact brief in the Quick start, the run's hand-over added, honest about context.
+- Charo and La Chani examples: personal-looking lines made generic.
+- Less duplication between SKILL.md, the Orca guide and the docs.
+
 ## 1.0.0 (2026-11-21)
 
 First public release.

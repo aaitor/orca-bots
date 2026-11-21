@@ -21,19 +21,12 @@ knits during long test runs. Make her some avatars.
 
 ## What happens
 
-1. **Questions.** At most three, only about what would change the result. Everything else gets a
-   default, and the skill tells you what it assumed.
-2. **Research.** It looks for skills, tools and docs that already cover part of the job, and for
-   the source of truth behind every fact the bot will state.
-3. **Runbook.** A skill with one section per request, what needs your approval, and where output
-   goes. If an existing skill already does the job, the bot just points at it.
-4. **SOUL.** The persona in the first person, its example lines, its serious mode, its Never list.
-5. **Install.** If the bot is not in Orca yet, the skill asks you to create it in the app with the
-   name and purpose line (from inside a bot's chat it can offer a creation card instead). Then it
-   writes the SOUL and checks the "For:" line.
-6. **Avatars.** Round 1 as a contact sheet, with two or three it recommends.
-7. **Hand-over.** Paths, what the bot does alone and what it drafts, anything it reshaped from
-   your brief, three prompts to try.
+The skill asks at most three questions, then writes the runbook, the SOUL and round-1 avatars, and
+ends with a hand-over. The steps are in [How it works](../README.md#how-it-works); a real hand-over
+is in [Margo's example](../skills/orca-bot-builder/examples/margo-the-doc-keeper/handover.md).
+
+**New bot?** Make your first message in its chat "Your SOUL.md is final, keep it as it is."
+Orca's first-run setup otherwise rewrites the SOUL on that first message.
 
 ## Avatar rounds
 

@@ -41,11 +41,11 @@ def scanlines(g, rows, src, dst):
             g[y] = [dst if c == src else c for c in g[y]]
 
 
-def behind(g, x0, y0, rows, bg='.'):
-    """sprite() that paints only background cells, so the prop sits behind the head."""
+def behind(g, x0, y0, rows, bg='.', odd=','):
+    """sprite() that paints only background cells (plain or scanline), so the prop sits behind the head."""
     for dy, row in enumerate(rows):
         for dx, ch in enumerate(row):
-            if ch != ' ' and g[y0 + dy][x0 + dx] == bg:
+            if ch != ' ' and g[y0 + dy][x0 + dx] in (bg, odd):
                 g[y0 + dy][x0 + dx] = ch
 
 

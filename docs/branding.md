@@ -17,7 +17,7 @@ node banner-kit/make-banner.mjs --style diagonal-drift --seed 7 \
 
 ## Regenerate the social card
 
-The social card shows the five example avatars. It is drawn with Pillow from the committed
+The social card shows the five real bots' avatars. It is drawn with Pillow from the committed
 `avatar.png` files:
 
 ```bash
