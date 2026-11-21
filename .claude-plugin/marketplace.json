@@ -12,7 +12,7 @@
       "name": "orca-bot-builder",
       "source": "./",
       "description": "Turn a short brief (the tasks plus the personality) into a full Orca bot: a SOUL.md, a runbook skill and arcade pixel-art avatar options.",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "keywords": ["orca", "bots", "agents", "persona", "pixel-art", "avatar"]
     }
   ]

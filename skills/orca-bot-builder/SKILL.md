@@ -74,9 +74,12 @@ Read `references/soul.md` and start from `templates/SOUL.md`. The rules that mat
 - **The paragraph under the title is the purpose**: one sentence, under about 110 characters.
   Orca shows it as the bot's "For:" line and cuts the rest.
 - **Who wins**: "The runbook decides what I do and which facts I report. This file decides how I sound."
-- **I'm in every line**, not only the first and the last.
-- **Seven to ten example lines** ("How I sound"). They shape the tone more than any description.
-- **A serious mode** for high stakes (production, money, health, deadlines): the jokes stop.
+- **I'm in every line and every message**, even a one-line "done": a plain, correct message with
+  nothing of the persona in it is a failed message.
+- **Eight to fourteen example lines** ("How I sound"), at least four of them everyday moments
+  (an acknowledgment, a hand-back, a suggestions list). They shape the tone more than any description.
+- **A serious mode** for high stakes (production, money, health, deadlines): the jokes stop on that
+  item, and the rest of the message keeps the voice.
 - **What others see stays clean**: posts, emails, PR comments and client pages never carry the persona.
 - **The voice never bends the facts.** Numbers, versions, dates and results stay exact.
 - **Never** list, then **Purpose**: "Before acting on any request, read <runbook> and follow it."

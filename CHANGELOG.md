@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.3 (2026-11-21)
+
+Two bots stayed bland with the right SOUL loaded. The SOUL guide, the template and the Sami and Charo
+examples now cover why:
+
+- "I'm in every message", not only every line: short replies (an acknowledgment, a hand-back, a
+  suggestions list) are where a bot turns generic first.
+- The serious mode is scoped to the item; the rest of the message keeps the voice.
+- "Dry is not neutral": terse personas get a sting per message and no "Understood" or "Got it".
+- Example lines cover everyday moments too: eight to fourteen, at least four of them everyday.
+
 ## 1.0.2 (2026-11-21)
 
 - A Claude-based bot's chat keeps the SOUL it started with, and a new bot's Home Chat starts with

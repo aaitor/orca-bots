@@ -12,10 +12,10 @@ Every SOUL in `examples/` follows this order. Start from `templates/SOUL.md`.
 | `# <Name>, the <Role>` | The title. Orca uses the folder and `bot.json` for the display name. |
 | Purpose line | The first paragraph after the title, one sentence under about 110 characters: "<Owner>'s <role>: <what it does>". Orca shows it as **For:** in `orca bot list` (cut at about 117 characters) and to other agents looking for help. |
 | **Who I am** | Two to four short paragraphs in the first person: background, a vivid detail or two, what they care about, tastes. |
-| **How I talk** | Six to eight bullets. The first one is always the "who wins" rule. |
+| **How I talk** | Six to nine bullets. The first is always the "who wins" rule, the second "I'm in every message". |
 | **When it's <high stakes>** | The serious mode. Name the situations: production, live money, health, a deadline today, the owner's name on something public. |
 | **What <audience> sees** | What leaves the chat (PRs, posts, emails, client pages) is clean and professional. The persona stays in the chat. |
-| **How I sound** | Seven to ten example lines, introduced with "I write my own each time and don't repeat them word for word." |
+| **How I sound** | Eight to fourteen example lines, introduced with "I write my own each time and don't repeat them word for word." At least four are everyday moments. |
 | **Never** | Five to eight hard limits. |
 | **Purpose** | The job in one line, "Before acting on any request, read <runbook path> and follow it.", the request phrasings, and one closing guarantee. |
 
@@ -35,14 +35,21 @@ These come from bots that came out flat the first time.
 3. **Make the runbook agree.** Its report section must say to write in the SOUL voice from the first
    line to the last, without changing any fact. A runbook that says "follow exactly" and shows a
    plain template will beat the SOUL.
-4. **"I'm in every line."** Asides, opinions and small complaints run through the bullets too, not
-   just a joke at the top and one at the bottom. Keep them short.
+4. **"I'm in every line, and in every message."** Asides, opinions and small complaints run through
+   the bullets too, not just a joke at the top and one at the bottom. Short replies count: an
+   acknowledgment, a setup confirmation, a hand-back or a list of suggestions is where a bot turns
+   generic first. Write it into the SOUL: *"A plain, correct message with nothing of me in it is a
+   failed message."*
 5. **Example lines beat adjectives.** "Sarcastic" means little; *"Staging's green. Don't look so
    surprised, I was here the whole time."* means a lot. Cover the bot's real moments: starting a
-   job, a flaky failure, an expired credential, a success, a real problem, a compliment.
-6. **A serious mode.** Name the high-stakes moments and say the jokes stop: say what is about to
-   happen, do it carefully, report exactly, stop and bring the safest way forward if it breaks.
-   One line of personality is allowed once it is safely done.
+   job, a flaky failure, an expired credential, a success, a real problem, a compliment, and the
+   everyday ones: acknowledging an instruction, confirming a setup, handing work back, a list of
+   suggestions, nothing to report.
+6. **A serious mode, scoped to the item.** Name the high-stakes moments and say the jokes stop on
+   that item: say what is about to happen, do it carefully, report exactly, stop and bring the
+   safest way forward if it breaks. The rest of the message keeps the voice. A serious mode that
+   covers most of the job (health, money and deadlines for an assistant) switches the persona off
+   for good.
 7. **The voice never bends the facts.** Write it in **Never**: numbers, versions, dates, money,
    results and draft-versus-live stay exact. "I don't know yet" when it doesn't.
 8. **Clean outside the chat.** Anything teammates, clients or the public see is professional and
@@ -53,7 +60,10 @@ These come from bots that came out flat the first time.
 10. **Gender-neutral about others.** Example lines about third parties use roles ("We write to the
     VP"), not guessed pronouns.
 11. **Answer in the owner's language.** Slang from the persona's own background is fine on top.
-12. **Concrete, odd details.** "Sold my sister's bicycle back to her, with a service plan." "I don't
+12. **Dry is not neutral.** A terse persona ("serious, dry and short, I do lists") reads to the
+    model as permission to write plainly. Give it a sting in every message and ban the neutral
+    openers ("Understood", "Got it").
+13. **Concrete, odd details.** "Sold my sister's bicycle back to her, with a service plan." "I don't
     discuss my cats." One strange specific detail does more than a paragraph of traits.
 
 ## The Never list
@@ -72,10 +82,12 @@ Derive it from the job's risks. The usual entries:
 
 - [ ] Title and purpose line; the purpose is one sentence under about 110 characters.
 - [ ] All first person; no "he/she is" descriptions of the bot.
-- [ ] "Who wins" is the first bullet of How I talk.
+- [ ] "Who wins" is the first bullet of How I talk; "I'm in every message" the second.
+- [ ] Serious mode is scoped to the item, not the whole message.
 - [ ] Serious mode names the real high-stakes moments of this job.
 - [ ] What-others-see section matches where its output goes.
-- [ ] Seven to ten example lines, in the bot's real situations, with no real private data.
+- [ ] Eight to fourteen example lines, in the bot's real situations, at least four of them everyday
+      moments, with no real private data.
 - [ ] Never list covers this job's risks; nothing in it contradicts the runbook.
 - [ ] Purpose points at the runbook path and lists the request phrasings.
 - [ ] No secrets, tokens or private details of the owner.
@@ -89,6 +101,7 @@ Derive it from the job's risks. The usual entries:
    them off for the bot (`references/orca.md`, "Plugins and hooks").
 3. Look for a third-person description and rewrite it in the first person.
 4. Look for a runbook that dictates the report format; add the "write it in your SOUL voice" line.
-5. Add example lines for the exact situation that came out flat.
+5. Add example lines for the exact situation that came out flat. Flat only in short replies or on
+   serious topics: check rules 4, 6 and 12.
 6. Run a voice check: a separate session with the SOUL, the runbook and the facts of that reply,
    no tools that change anything. Show the owner the before and after.

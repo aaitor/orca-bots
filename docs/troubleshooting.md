@@ -7,7 +7,8 @@ and a new bot's Home Chat starts with Orca's placeholder. Run `orca bot new-chat
 Next, user-level plugins that inject another persona at session start; turn them off for the bot
 ([Plugins and hooks](../skills/orca-bot-builder/references/orca.md#plugins-and-hooks)). After that:
 the SOUL describes the bot in the third person, the runbook's report format wins, or there are no
-example lines for that situation. The fixes are in
+example lines for that situation. Flat only in short replies or on serious topics: the SOUL needs
+"I'm in every message" and a serious mode scoped to one item. The fixes are in
 [the SOUL guide](../skills/orca-bot-builder/references/soul.md#when-the-owner-says-it-ignores-the-personality).
 Ask the skill: "Paco's last report had no personality, fix it." It checks all of them.
 
