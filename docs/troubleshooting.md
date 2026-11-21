@@ -2,11 +2,14 @@
 
 ## The bot ignores its personality
 
-Usually one of four things: the reply came from the old SOUL (Orca sends the new one with the next
-message), the SOUL describes the bot in the third person, the runbook's report format wins, or
-there are no example lines for that situation. The fixes are in
+Most often the chat runs on an old SOUL: a Claude-based bot's chat keeps the SOUL it started with,
+and a new bot's Home Chat starts with Orca's placeholder. Run `orca bot new-chat --bot "<Name>"`.
+Next, user-level plugins that inject another persona at session start; turn them off for the bot
+([Plugins and hooks](../skills/orca-bot-builder/references/orca.md#plugins-and-hooks)). After that:
+the SOUL describes the bot in the third person, the runbook's report format wins, or there are no
+example lines for that situation. The fixes are in
 [the SOUL guide](../skills/orca-bot-builder/references/soul.md#when-the-owner-says-it-ignores-the-personality).
-Ask the skill: "Paco's last report had no personality, fix it." It checks all four.
+Ask the skill: "Paco's last report had no personality, fix it." It checks all of them.
 
 ## The SOUL changed after the bot's first message
 

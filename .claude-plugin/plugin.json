@@ -1,7 +1,7 @@
 {
   "name": "orca-bot-builder",
   "description": "Turn a short brief (the tasks plus the personality) into a full Orca bot: a SOUL.md, a runbook skill and arcade pixel-art avatar options.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Aitor Argomaniz",
     "url": "https://github.com/aaitor"

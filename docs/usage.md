@@ -50,8 +50,8 @@ bot would give. It is the fastest way to see whether the personality survives a 
 
 ## Changing a bot later
 
-- **Personality**: ask the skill to edit the SOUL ("make Paco less grumpy in reports"). Orca sends
-  the new SOUL with your next message; no new chat needed.
+- **Personality**: ask the skill to edit the SOUL ("make Paco less grumpy in reports"), then start
+  a new Home Chat (`orca bot new-chat --bot "<Name>"`): an open chat keeps the SOUL it started with.
 - **Job**: ask it to update the runbook. Keep the SOUL's Never list and the runbook's rules in step.
 - **By hand**: `SOUL.md` is yours to edit. Keep the purpose line right under the title.
 

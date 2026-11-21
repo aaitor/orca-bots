@@ -43,8 +43,39 @@ What it doesn't say:
 
 ## When a SOUL change takes effect
 
-Orca sends the current `SOUL.md` with the next message to the bot. A reply that was already running
-used the old one. No new chat is needed.
+Orca builds a chat's instructions, `SOUL.md` included, when the chat starts. A Claude-based bot
+resumes the same chat on every message, so its instructions stay as they were at the start; a new
+bot's Home Chat starts at creation with Orca's placeholder SOUL ("Describe <Name> here..."). When
+`SOUL.md` changes, Orca adds it to the next message of an open chat with the note "They rank below
+the user's current request", and in a long chat that note loses to everything around it.
+
+So after installing or changing a SOUL, start a new Home Chat:
+
+```bash
+orca bot new-chat --bot "<Name>"
+```
+
+The old chat stays in history; the SOUL and the memory carry over. To check a chat, look for the
+`## SOUL.md` section of its system prompt in the session transcript
+(`~/.claude/projects/-home-<user>--orca-bots-<slug>/<session>.jsonl`, the `api-request-shape`
+entries).
+
+## Plugins and hooks
+
+A Claude-based bot loads the owner's user settings, so user-level plugins run in it too. Some
+inject text at session start that competes with the SOUL: another persona, "you must use these
+skills", summaries of other sessions. Turn them off for one bot in
+`<bot home>/.claude/settings.local.json` (Orca doesn't manage `.claude/`):
+
+```json
+{
+  "enabledPlugins": { "<plugin>@<marketplace>": false }
+}
+```
+
+Keep a plugin when the bot's runbook uses its skills. Check it with a headless session in the bot
+folder, `claude -p --setting-sources=user,project,local "..."`, asking whether a phrase from the
+hook's text is in its context.
 
 ## Tools and accounts
 

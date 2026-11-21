@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.2 (2026-11-21)
+
+- A Claude-based bot's chat keeps the SOUL it started with, and a new bot's Home Chat starts with
+  Orca's placeholder. Installing or changing a SOUL now ends with `orca bot new-chat --bot "<Name>"`.
+  The docs used to say the next message was enough.
+- New "Plugins and hooks" section: turn off user-level plugins that inject another persona or
+  process at session start, per bot, in `<bot home>/.claude/settings.local.json`.
+
 ## 1.0.1 (2026-11-21)
 
 From Sami's review:

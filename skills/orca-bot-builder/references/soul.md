@@ -1,7 +1,7 @@
 # Writing a SOUL.md
 
-`SOUL.md` is the bot's identity. Orca gives it to the bot with every message, and the owner owns the
-file. It decides **how the bot sounds and what it never does**. The runbook decides what it does.
+`SOUL.md` is the bot's identity. Orca puts it in the bot's instructions when a chat starts, and
+the owner owns the file. It decides **how the bot sounds and what it never does**. The runbook decides what it does.
 
 ## Anatomy
 
@@ -20,7 +20,7 @@ Every SOUL in `examples/` follows this order. Start from `templates/SOUL.md`.
 | **Purpose** | The job in one line, "Before acting on any request, read <runbook path> and follow it.", the request phrasings, and one closing guarantee. |
 
 Optional sections when the job needs them: **People** (how it treats third parties), **How I work**
-(where its notes go, how it reports). Keep it under about 120 lines; the bot reads it every turn.
+(where its notes go, how it reports). Keep it under about 120 lines; it sits in the bot's instructions for the whole chat.
 
 ## The rules that make the personality stick
 
@@ -82,10 +82,13 @@ Derive it from the job's risks. The usual entries:
 
 ## When the owner says "it ignores the personality"
 
-1. Check which SOUL the reply came from: Orca sends the updated SOUL with the **next** message.
-   A reply written before the edit used the old file.
-2. Look for a third-person description and rewrite it in the first person.
-3. Look for a runbook that dictates the report format; add the "write it in your SOUL voice" line.
-4. Add example lines for the exact situation that came out flat.
-5. Run a voice check: a separate session with the SOUL, the runbook and the facts of that reply,
+1. Check which SOUL the chat runs on. A Claude-based bot's chat keeps the SOUL it started with
+   (a new bot's Home Chat starts with Orca's placeholder), and later edits arrive only as a note
+   that ranks below the request. Start a new Home Chat: `orca bot new-chat --bot "<Name>"`.
+2. Look for user-level plugins that inject another persona or process at session start, and turn
+   them off for the bot (`references/orca.md`, "Plugins and hooks").
+3. Look for a third-person description and rewrite it in the first person.
+4. Look for a runbook that dictates the report format; add the "write it in your SOUL voice" line.
+5. Add example lines for the exact situation that came out flat.
+6. Run a voice check: a separate session with the SOUL, the runbook and the facts of that reply,
    no tools that change anything. Show the owner the before and after.

@@ -93,8 +93,13 @@ Read `references/orca.md` for the folder layout, first-run setup and tools. The 
    create it in Orca with the name and the purpose line. Inside a bot's chat, `orca bot create
    --offer --name "<Name>" --purpose "<purpose line>"` puts a creation card in the chat instead.
 3. Write `SOUL.md` and the runbook. Never edit `AGENTS.md`, `CLAUDE.md` or `bot.json`: Orca rewrites them.
-4. Check that `orca bot list` shows the new "For:" line. Orca sends the new SOUL with the next message;
-   no new chat is needed.
+4. Check that `orca bot list` shows the new "For:" line.
+5. Start a new Home Chat: `orca bot new-chat --bot "<Name>"`. A Claude-based bot's chat keeps the
+   SOUL it started with (for a new bot, Orca's placeholder); an open chat gets later edits only as
+   a note that ranks below the request. The old chat stays in history; SOUL and memory carry over.
+6. If user-level plugins inject instructions at session start (another persona, mandatory process
+   skills, summaries of other sessions), turn them off for this bot in
+   `<bot home>/.claude/settings.local.json`; see `references/orca.md`.
 
 ## 5. Draw the avatar options
 
@@ -126,8 +131,8 @@ Tell the owner, briefly and in plain words:
 - anything you reshaped from the brief, and why;
 - three prompts to try in the bot's chat;
 - the avatars you recommend, and how to upload one;
-- for a new bot: make the first message in its chat "Your SOUL.md is final, keep it as it is."
-  A new bot's first answered message runs Orca's first-run setup, which rewrites `SOUL.md`.
+- for a new bot: make the first message in its new Home Chat "Your SOUL.md is final, keep it as it
+  is." A new bot's first answered message runs Orca's first-run setup, which rewrites `SOUL.md`.
 
 Offer a **voice check**: give a separate session the SOUL, the runbook and the facts from one real
 request, with no tools that change anything, and show the owner how the bot sounds.
