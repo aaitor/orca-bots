@@ -122,4 +122,5 @@ Before drawing, open the example closest to the new bot and borrow from it.
 | `examples/chani-the-marketer/avatar.py` | A high ponytail and hoops, a bubblegum bubble, a disco ball, a selfie phone, a megaphone, an afro, heart sunglasses |
 | `examples/charo-the-admin/avatar.py` | An old face, a bun, half-moon glasses, a cat; round 2 widens the face and adds angry, sarcastic, eye-roll, side-eye and fuming (steam) faces |
 | `examples/richard-the-dealmaker/avatar.py` | A suit and tie, `behind()`, a coin flip, dollar eyes, a conductor's baton with notes, a gilt frame and painting, wine, palette overrides and a `look()` composer for round 2 |
+| `examples/margo-the-doc-keeper/avatar.py` | Drawn by the skill itself: hair styles as swappable top rows, an `outline()` pass, spikes, a mohawk, cat-eye glasses on a chain, a studded jacket, a shush hand, a card-catalogue drawer |
 | `templates/avatar.py` | The starter: a neutral portrait, skin and hair palettes, a few faces and a held mug |

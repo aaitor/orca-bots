@@ -9,6 +9,7 @@ First public release.
 - Templates: `SOUL.md`, `RUNBOOK.md` and a starter `avatar.py` with skin and hair palettes.
 - `pixelart.py` helpers, including `behind()`, `save()` and `html_page()` for Orca inline visuals.
 - Five worked examples (Paco, Sami, La Chani, Charo, Richard) with briefs, SOULs, avatar scripts,
-  round contact sheets and the chosen avatars.
+  round contact sheets and the chosen avatars, plus Margo, built by the skill in one unedited run,
+  runbook included.
 - Claude Code plugin and marketplace manifests.
 - CI: documentation links, manifests and pixel-exact redraws of the example avatars.

@@ -24,6 +24,7 @@ CHOSEN = {
     'chani-the-marketer': 'round-1/2-bubblegum.png',
     'charo-the-admin': 'round-2/2f-angry-cat.png',
     'richard-the-dealmaker': 'round-2/2a-grin.png',
+    'margo-the-doc-keeper': 'round-1/1-shush.png',  # built by the skill; its first recommendation
 }
 
 

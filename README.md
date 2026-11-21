@@ -46,7 +46,8 @@ teammates.
 </table>
 
 Each example has the brief that was typed, the `SOUL.md` that came out, and the script that draws
-every avatar round. See [all the examples](skills/orca-bot-builder/examples/).
+every avatar round. A sixth, Margo, was built by the skill on its own (below). See
+[all the examples](skills/orca-bot-builder/examples/).
 
 ## How the avatars come out
 
@@ -88,6 +89,19 @@ will still read at that size.
 ![Charo, round 2](skills/orca-bot-builder/examples/charo-the-admin/round-2/contact-sheet.png)
 </details>
 
+## Built by the skill, unedited
+
+[Margo, the Doc Keeper](skills/orca-bot-builder/examples/margo-the-doc-keeper/) is the brief from the
+Quick start below, run once through the skill in a headless Claude Code session with no other
+context. It wrote a first-person SOUL, a full `docs-desk` runbook, and these six concepts. Before
+showing them, it caught and fixed what read wrong at 40 px: a shush finger that looked like a long
+nose, a mohawk that looked like a grey cap, crossed pencils that looked like a tiara.
+
+![Margo, round 1: six concepts of a punk librarian, drawn by the skill on its own](skills/orca-bot-builder/examples/margo-the-doc-keeper/round-1/contact-sheet.png)
+
+It also tightened the brief on its own and said so: pushing a branch waits for the owner's go,
+PRs open as drafts, and "update docs for PR #N" refuses unmerged PRs.
+
 ## Quick start
 
 **You need:** [Orca](https://github.com/stablyai/orca) with an agent that loads skills (tested with
@@ -121,7 +135,7 @@ index cards and the Ramones, calls stale docs "overdue books". Make her some ava
 
 **What you get back:** a short list of assumptions, the `SOUL.md`, a runbook skill, a round-1
 contact sheet of four to eight avatar concepts with two or three recommended, and three prompts to
-try. The skill asks you to create the bot in Orca if it doesn't exist yet, installs the SOUL into
+try. [Margo's folder](skills/orca-bot-builder/examples/margo-the-doc-keeper/) is exactly that output. The skill asks you to create the bot in Orca if it doesn't exist yet, installs the SOUL into
 `~/.orca/bots/<slug>/`, and leaves the avatar for you to upload by clicking the bot's picture.
 Then say "more variations of 3" or "make him older, with glasses" and it draws round 2.
 
@@ -138,8 +152,8 @@ Then say "more variations of 3" or "make him older, with glasses" and it draws r
 - **Arcade avatars.** A starter script, pixel helpers, five finished examples to borrow from,
   contact sheets with Orca-sized round previews, and a list of lessons on what reads at 40 px.
   See [the avatar guide](skills/orca-bot-builder/references/avatars.md).
-- **Reproducible pictures.** Every bot keeps its `avatar.py`. CI redraws the five examples and
-  checks them pixel for pixel against the avatars their owner picked.
+- **Reproducible pictures.** Every bot keeps its `avatar.py`. CI redraws every example and checks
+  it pixel for pixel against the avatar its owner picked.
 
 **Limits:** avatars are uploaded by hand (Orca has no avatar CLI). Bots are created in the Orca app,
 or from inside a bot's chat with `orca bot create --offer`. The pixel style is one style: 32 x 32,
@@ -183,7 +197,7 @@ skills/orca-bot-builder/
   references/           SOUL, runbook, avatar and Orca guides
   templates/            SOUL.md, RUNBOOK.md and avatar.py starters
   scripts/pixelart.py   pixel-art helpers
-  examples/             five bots: brief, SOUL, avatar script, rounds, chosen avatar
+  examples/             six bots: brief, SOUL, avatar script, rounds, chosen avatar
 .claude-plugin/         Claude Code plugin and marketplace manifests
 scripts/check.py        repository checks: docs, manifests, example redraws
 docs/                   installation, usage, troubleshooting, branding
