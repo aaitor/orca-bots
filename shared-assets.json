@@ -1,0 +1,9 @@
+{
+  "template": {
+    "repository": "https://github.com/aaitor/oss-repo-template",
+    "revision": "fb09a0208fffac8b56ce917bf5d6bf3805f2dbd3"
+  },
+  "files": {
+    "assets/hero.svg": "generated with banner-kit/make-banner.mjs (diagonal-drift, seed 7)"
+  }
+}

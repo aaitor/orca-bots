@@ -1,0 +1,29 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python helper artifacts
+__pycache__/
+*.py[cod]
+.venv/
+
+# Common build outputs
+node_modules/
+dist/
+build/
+coverage/
+
+# Example renders: only contact sheets and the chosen avatar are committed
+skills/orca-bot-builder/examples/*/round-*/*.png
+!skills/orca-bot-builder/examples/*/round-*/contact-sheet.png
+skills/orca-bot-builder/examples/*/concepts/
+skills/orca-bot-builder/templates/round-*/
